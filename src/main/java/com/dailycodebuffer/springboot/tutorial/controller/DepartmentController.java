@@ -48,4 +48,11 @@ public class DepartmentController {
 		return departmentService.updateDepartment(departmentId, department);
 	}
 
+	@GetMapping("/departments/name/{name}")
+	public Department fetchDepartmentByName(@PathVariable("name") String departmentNane) {
+		return departmentService.fetchDepartmentByName(departmentNane);	
+	}
+	
+	
+
 }
