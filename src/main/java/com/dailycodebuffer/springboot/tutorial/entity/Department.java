@@ -5,6 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Length;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,15 +23,16 @@ public class Department {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@Column(name = "id")//serve apenas para tabela, postman não
+	// @Column(name = "id")//serve apenas para tabela, postman não
 	private Long departmentId;
 
-	//@Column(name = "name")
+	// @Column(name = "name")
+	@NotBlank(message = "Please add department name")
 	private String departmentName;
-	
-	//@Column(name = "address")
+
+	// @Column(name = "address")
 	private String departmentAddress;
 
-	//@Column(name = "code")
+	// @Column(name = "code")
 	private String departmentCode;
 }
