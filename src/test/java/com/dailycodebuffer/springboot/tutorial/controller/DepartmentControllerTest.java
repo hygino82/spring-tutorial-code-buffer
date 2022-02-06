@@ -1,8 +1,10 @@
 package com.dailycodebuffer.springboot.tutorial.controller;
 
-import com.dailycodebuffer.springboot.tutorial.entity.Department;
-import com.dailycodebuffer.springboot.tutorial.error.DepartmentNotFoundException;
-import com.dailycodebuffer.springboot.tutorial.service.DepartmentService;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -12,10 +14,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import com.dailycodebuffer.springboot.tutorial.entity.Department;
+import com.dailycodebuffer.springboot.tutorial.service.DepartmentService;
 
 @WebMvcTest(DepartmentController.class)
 class DepartmentControllerTest {
