@@ -1,5 +1,5 @@
 server:
-  port:8080
+  port: 8080
 
 welcome:
   message: Welcome to Daily Code Buffer!!
@@ -14,3 +14,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: 'true'
+    
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"
