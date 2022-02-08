@@ -16,7 +16,8 @@ spring:
     show-sql: 'true'
     
 management:
-  endpoint:
+  endpoints:
     web:
       exposure:
         include: "*"
+        
